@@ -1,2 +1,3 @@
-Trixx
-marina Natan e Nicole
+#Trixx
+Marina Natan e Nicole
+Segunda Série B
