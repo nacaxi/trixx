@@ -1,1 +1,2 @@
-# trixx
+Trixx
+marina Natan e Nicole
