@@ -1,3 +1,2 @@
 # Trixx
-Marina Natan e Nicole
-Segunda Série B
+Marina Natan e Nicole - Segunda Série B
