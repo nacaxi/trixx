@@ -1,0 +1,296 @@
+/* ==========================================================
+   Trixx
+   ========================================================== */
+
+:root {
+    --fundo: #1b0b30;
+    --superficie: #2b1649;
+    --linha: #4a2f73;
+    --branco: #ffffff;
+    --texto-suave: #cbbfe0;
+    --azul: #2a3fe8;
+    --azul-claro: #3c92fa;
+    --rosa: #ff4fa3;
+
+    --fonte-titulo: "Sora", "Inter", system-ui, sans-serif;
+    --fonte-texto: "Inter", system-ui, sans-serif;
+
+    --raio: 12px;
+    --largura: 1120px;
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fonte-texto);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--branco);
+    background-color: var(--fundo);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 1rem;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.25rem, 5.5vw, 4rem); }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); }
+h3 { font-size: 1.25rem; }
+
+p {
+    margin: 0 0 1rem;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--rosa);
+    outline-offset: 3px;
+}
+
+.container {
+    width: min(100% - 2.5rem, var(--largura));
+    margin-inline: auto;
+}
+
+/* ---------- Topo ---------- */
+
+.topo {
+    padding: 1.5rem 0;
+}
+
+.topo__logo {
+    height: 36px;
+    width: auto;
+}
+
+/* ---------- Botões ---------- */
+
+.botao {
+    display: inline-block;
+    padding: 0.875rem 1.5rem;
+    border: 2px solid var(--azul);
+    border-radius: 8px;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.botao:hover {
+    border-color: var(--azul-claro);
+    background-color: var(--azul-claro);
+    color: var(--fundo);
+}
+
+.botao--secundario {
+    border-color: var(--branco);
+    background-color: transparent;
+}
+
+.botao--secundario:hover {
+    border-color: var(--branco);
+    background-color: var(--branco);
+    color: var(--fundo);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    padding: clamp(2rem, 6vw, 5rem) 0;
+    background-image: url("img/background1.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+}
+
+.hero__conteudo {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4rem);
+}
+
+.hero__descricao {
+    max-width: 52ch;
+    font-size: 1.125rem;
+    color: var(--texto-suave);
+}
+
+.hero__botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 2rem 0 1rem;
+}
+
+.hero__aviso {
+    font-size: 0.8125rem;
+    color: var(--texto-suave);
+}
+
+.hero__imagem {
+    width: 100%;
+}
+
+/* ---------- Blocos de recursos ---------- */
+
+.recurso {
+    padding: clamp(2.5rem, 7vw, 5rem) 0;
+}
+
+.recurso:nth-of-type(even) {
+    background-color: var(--superficie);
+}
+
+.recurso__conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5rem);
+}
+
+.recurso__imagem {
+    width: 100%;
+}
+
+.recurso__texto {
+    max-width: 48ch;
+}
+
+.recurso__texto p {
+    font-size: 1.125rem;
+    color: var(--texto-suave);
+}
+
+.recurso__texto .botao {
+    margin-top: 0.5rem;
+}
+
+.recurso--inverso .recurso__imagem {
+    order: 2;
+}
+
+/* ---------- Dispositivos ---------- */
+
+.dispositivos {
+    padding: clamp(3rem, 8vw, 6rem) 0;
+    text-align: center;
+}
+
+.dispositivos__lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.dispositivo {
+    padding: 2rem 1rem;
+    border: 1px solid var(--linha);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+}
+
+.dispositivo img {
+    height: 80px;
+    width: auto;
+    margin: 0 auto 1rem;
+}
+
+.dispositivo h3 {
+    margin: 0;
+}
+
+/* ---------- Rodapé ---------- */
+
+.rodape {
+    padding: 3rem 0;
+    border-top: 1px solid var(--linha);
+    text-align: center;
+}
+
+.rodape__logo {
+    height: 32px;
+    width: auto;
+    margin: 0 auto 1.5rem;
+}
+
+.rodape__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.rodape__links a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.rodape__links a:hover {
+    color: var(--rosa);
+    text-decoration: underline;
+}
+
+.rodape p {
+    max-width: 80ch;
+    margin: 0 auto 1rem;
+    font-size: 0.875rem;
+    color: var(--texto-suave);
+}
+
+/* ---------- Telas menores ---------- */
+
+@media (max-width: 800px) {
+    .hero__conteudo,
+    .recurso__conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__imagem {
+        order: 2;
+    }
+
+    .recurso--inverso .recurso__imagem {
+        order: 0;
+    }
+
+    .botao {
+        width: 100%;
+    }
+
+    .dispositivos__lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .botao { transition: none; }
+}
